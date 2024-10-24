@@ -1,0 +1,16 @@
+{% extends 'todo/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h2>{% if form.instance.pk %}Edit Todo{% else %}Add Todo{% endif %}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.title|as_crispy_field }}
+        {{ form.description|as_crispy_field }}
+        {{ form.completed|as_crispy_field }}
+        <button type="submit" class="btn btn-primary">
+            {% if form.instance.pk %}Update{% else %}Save{% endif %}
+        </button>
+    </form>
+{% endblock %}
+
+

@@ -1,0 +1,28 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+    <h2>Todo List</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Completed</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in todos %}
+            <tr>
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.description }}</td>
+                <td>{{ todo.completed }}</td>
+                <td>
+                    <a href="{% url 'todo_update' todo.id %}" class="btn btn-info">Edit</a>
+                    <a href="{% url 'todo_delete' todo.id %}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

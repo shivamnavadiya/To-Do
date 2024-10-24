@@ -1,0 +1,117 @@
+/* General styles */
+body {
+    background-color: #3f51b5; /* Deep indigo background color */
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* White text color for better readability on dark background */
+}
+
+.container {
+    margin-top: 20px;
+}
+
+
+
+/* Navbar styling */
+.navbar {
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff7043, #ffcc80); /* Gradient from orange to soft orange */
+    border-bottom: 1px solid #e65100; /* Dark orange border at the bottom */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff; /* White color for the brand name */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff; /* White color for the links */
+    font-weight: 500;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffeb3b; /* Bright yellow on hover */
+}
+/* Form styling */
+form {
+    background-color: #ffcc80; /* Soft orange background for the form */
+    border: 1px solid #ff7043; /* Orange border */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    margin-bottom: 20px;
+    color: #e65100; /* Darker orange for the form heading */
+}
+
+form .btn {
+    background-color: #ff7043; /* Orange button */
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+form .btn:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
+
+/* List styling */
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-list li {
+    background-color: #ffcc80; /* Soft orange for list items */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #ff7043; /* Orange border on the left */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list li .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-list li .todo-item .todo-text {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.todo-list li .todo-item .btn {
+    margin-left: 10px;
+}
+
+.todo-list li .todo-item .btn-danger {
+    background-color: #f44336; /* Red button */
+}
+
+.todo-list li .todo-item .btn-danger:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .todo-list li {
+        padding: 10px;
+    }
+
+    .todo-list li .todo-item .btn {
+        margin-left: 5px;
+    }
+}
